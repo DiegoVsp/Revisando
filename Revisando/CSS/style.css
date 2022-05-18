@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: red;
+}
+
+/* Comentário */
+h2 {
+  color: green;
+  text-align: center;
+  font-size: 50px;
+}
+p {
+  color: gray;
+  margin: 10px 0;
+}
+
+#titulo-app {
+  color:pink;
+  font-size: 40px;
+  text-align: center;
+}
+.p-texto {
+  color: aquamarine;
+}
+div p {
+  color:red;
+}
+.p-dentro-da-div {
+  color: blue;
+}
+#p-super-especifico {
+  color: green;
+}
+/* Cores */
+.nome {
+  color: orange;
+}
+.hexa {
+  color: #6a40c4;
+}
+.rgba {
+  color: rgba(73, 169, 224, .9);
+  font-size: 40px;
+}
+/* Backgrounds */
+.div-background {
+  height: 300px;
+  background-image: url("img/por-do-sol.jpg");
+}
+.titulo-background {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Fontes */
+
+.family {
+  color: #000;  
+  font-size: 40px;
+}
+.family.serif{
+  color:green;
+}
+.serif{
+font-family: 'Times New Roman';
+}
+.sans-serif {
+font-family: sans-serif;
+}
+.monospace {
+  font-family: 'Courier New';
+}
+
+.italic {
+  font-style: italic;
+}
+.oblique {
+  font-style: oblique;
+}
+.bold {
+  font-weight: bold;
+}
+.variants {
+  font-variant: small-caps;
+}
