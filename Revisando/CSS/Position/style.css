@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.div-position {
+  height: 400px;
+  width:400px;
+  background-color: red;
+  border: 10px solid black;
+}
+
+.static {
+  position: static;
+}
+.relative {
+  position:relative;
+  background-color: blue;
+  top: 100px;
+  left: 50px;
+}
+  .absolute{
+    position:absolute;
+    background-color:purple;
+    top: 0;
+    right: 0;
+  }
+  .mini-div {
+    background-color: green;
+    height:100px;
+    width:100px;
+    top: 0;
+    left: 0;
+  }
+
+  .fixed {
+    position:fixed;
+    background-color:aquamarine;
+    height:200px;
+    width:200px;
+    bottom:0;
+    right: 0;
+  }
+  .sticky{
+    position:sticky;
+    background-color:pink;
+    top:10px;
+  }
