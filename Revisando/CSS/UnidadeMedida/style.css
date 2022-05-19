@@ -1,0 +1,50 @@
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+.pixel-1 {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
+.pixel-2 {
+  background-color: blue;
+  height: 50px;
+  width: 500px;
+}
+.pai-porcentagem {
+  height: 500px;
+  width: 500px;
+  background-color: chartreuse;
+}
+.porcentagem-1 {
+  width: 50%;
+  height: 50%;
+  background-color: yellow;
+}
+.porcentagem-2 {
+  width: 50%;
+  height: 50%;
+  background-color: red;
+}
+.pai-em {
+  font-size: 50px;
+}
+.em-1 {
+  width: .5em;
+  height: .5em;
+  background-color: purple;
+}
+html {
+  font-size: 20px;
+}
+.rem-1{
+  width:1rem;
+  height: 1rem;
+  background-color:aqua;
+}
+.rem-2{ 
+  font-size: 2rem;
+}
