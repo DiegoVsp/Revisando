@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {  
+  min-height: 100vh; 
+  position: relative;
+  /* display:flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.formulario {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+
+  width: 360px;
+  height: 480px;
+
+  background-color: #333;
+  padding: 40px;
+  border-radius: 6px;
+}
+
+form h1 {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+form button{
+  max-width: 100px;
+  padding:8px 10px;
+  /* display:inline-block; */
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: none;
+  border: none;
+  transition: .3s;
+}
+form button:hover {
+  background-color:rgb(64, 238, 64);
+  color: #fff;
+}
+
+.campo {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.campo input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 16px;
+  font-weight: 300;
+  outline: none;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.campo label {
+  display: inline-block;
+  width:100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom:10px;
+}
+.resultado {
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.valido {
+  border:2px solid green;
+  box-shadow: 3px 0px 15px 5px rgb(42, 228, 18);
+  border-radius: 10px;
+  padding:2px;
+}
+.invalido {
+  border:3px solid red;
+  box-shadow: 3px 0px 15px 5px rgb(241, 29, 29);
+  border-radius: 10px;
+  padding:2px;
+}
