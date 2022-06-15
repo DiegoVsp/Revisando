@@ -20,21 +20,41 @@
 
 // console.log(Date.now())
 
-function zeroAEsquerda(num) {
-  return num >= 10 ? num : `0${num}`;
+// function zeroAEsquerda(num) {
+//   return num >= 10 ? num : `0${num}`;
+// }
+// function formataData(data) {
+//   const dia = zeroAEsquerda(data.getDate());
+//   const mes = zeroAEsquerda(data.getMonth() + 1);
+//   const ano = zeroAEsquerda(data.getFullYear());
+//   const hora = zeroAEsquerda(data.getHours());
+//   const min = zeroAEsquerda(data.getMinutes());
+//   const seg = zeroAEsquerda(data.getSeconds());
+//   return `${dia}/${mes}/${ano} ${hora}:${min}:${seg}`
+// }
+// const data = new Date();
+// const dataBrasil = formataData(data)
+// console.log(dataBrasil)
+
+function buscarData() {
+  let data = new Date();
+  let ano = data.getFullYear();
+  let dia = data.getDate();
+  let mes = data.getMonth()+1;
+  
+  console.log(`Hoje é ${dia} de ${mes} de ${ano}`);
+  console.log(`O ultimo dia do mês anterior é ${retornarUltimoDia(ano,mes-1)}`);
+  console.log(`O primeiro dia do mês posterior é ${retornarPrimeiroDia(ano,mes+1)}`);
 }
-function formataData(data) {
-  const dia = zeroAEsquerda(data.getDate());
-  const mes = zeroAEsquerda(data.getMonth() + 1);
-  const ano = zeroAEsquerda(data.getFullYear());
-  const hora = zeroAEsquerda(data.getHours());
-  const min = zeroAEsquerda(data.getMinutes());
-  const seg = zeroAEsquerda(data.getSeconds());
-  return `${dia}/${mes}/${ano} ${hora}:${min}:${seg}`
+function retornarUltimoDia(ano,mes){
+  let data = new Date(ano,mes,0)
+  return data.getDate();
 }
-const data = new Date();
-const dataBrasil = formataData(data)
-console.log(dataBrasil)
+function retornarPrimeiroDia(ano,mes){
+  let data = new Date(ano,mes,1)
+  return data.getDate();
+}
+buscarData();
 
 
 
