@@ -13,7 +13,12 @@ for (let i = 0; i < elementos.length; i++) {
   let { tag, texto } = elementos[i];
   // div.innerHTML += `<${tag}>${tag} ${texto}</${tag}>`  
   let tagCriada = document.createElement(tag)
-  tagCriada.innerHTML = texto;
+  let textoCriado = document.createTextNode(texto) //criando nó de texto
+  
+  // tagCriada.innerHTML = texto;
+  // tagCriada.innerText = texto;
+  // div.appendChild(tagCriada);
+  tagCriada.appendChild(textoCriado)
   div.appendChild(tagCriada);
   
 }
