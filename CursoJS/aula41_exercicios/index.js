@@ -1,5 +1,5 @@
-const num1 = 10
-const num2 = 5
+// const num1 = 10
+// const num2 = 5
 
 // function maiorNum(n1, n2) {
 //   return n1 > n2 ? `é o ${n1}` : `é o ${n2}`
@@ -46,8 +46,28 @@ const num2 = 5
 // console.log(paisagem)
 
 // Arrow function
-const ePaisagem = (largura, altura) => largura > altura
+// const ePaisagem = (largura, altura) => largura > altura
 
-const paisagem = ePaisagem(800, 1900)
+// const paisagem = ePaisagem(800, 1900)
 
-console.log(paisagem)
+// console.log(paisagem)
+
+// Fizz Buzz
+
+function fizzBuzz(num) {
+  // num = Number(num);
+  // if (!num) return `Tem que ser um número`  //- Verificando
+
+  if (typeof num !== 'number') return num
+
+  if (num % 3 == 0 && num % 5 == 0) return `FizzBuzz`
+  if (num % 5 == 0) return `Buzz`
+  if (num % 3 == 0) return `Fizz`
+  return num
+
+  // return (num % 3 == 0 && num % 5 == 0) ? `FizzBuzz` : (num % 5 == 0) ? `Buzz` : (num % 3 == 0) ? `Fizz` : `Nem Fizz e nem Buzz`
+}
+
+for (let i = 0; i <= 100; i++) {
+  console.log(i, fizzBuzz(i))
+}
