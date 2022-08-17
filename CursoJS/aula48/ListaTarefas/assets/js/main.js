@@ -20,15 +20,51 @@ function verifica(inputTarefa) {
   if (!inputTarefa.value) return
   criaTarefa(inputTarefa.value)
 }
+function limpaInput() {
+  inputTarefa.value = ''
+  inputTarefa.focus()
+}
+function criaLi() {
+  const li = document.createElement('li') // cria Li
+  return li
+}
 function criaTarefa(texto) {
   const li = criaLi()
   li.innerHTML = texto
   li.classList.add('lista-tarefa')
   tarefas.appendChild(li)
-  inputTarefa.value = ' '
+  limpaInput()
+  criaBotaoApagar(li)
+  salvarTarefas(li)
 }
 
-function criaLi() {
-  const li = document.createElement('li') // cria Li
-  return li
+function criaBotaoApagar(li) {
+  li.innerText += ' '
+  const botaoApagar = document.createElement('button')
+  botaoApagar.innerText = 'Apagar'
+  // botaoApagar.classList.add('apagar')
+  botaoApagar.setAttribute('class', 'apagar')
+  botaoApagar.setAttribute('title', 'Apagar esta Tarefa')
+  li.appendChild(botaoApagar)
+}
+document.addEventListener('click', (e) => {
+  const el = e.target;
+  if (el.classList.contains('apagar')) {
+    el.parentElement.remove()
+  }
+})
+function salvarTarefas() {
+  const liTarefas = tarefas.querySelectorAll('li')
+  const listaDeTarefas = []
+  for (let tarefa of liTarefas) {
+    let tarefaTexto = tarefa.innerText
+    tarefaTexto = tarefaTexto.replace('Apagar', ' ').trim()
+    // console.log(tarefaTexto)
+    listaDeTarefas.push(tarefaTexto)
+  }
+  const tarefasJSON = JSON.stringify(listaDeTarefas)//String convertido para JSON
+
+  // Salvando Local Storage
+  localStorage.
+    console.log(tarefasJSON)
 }
