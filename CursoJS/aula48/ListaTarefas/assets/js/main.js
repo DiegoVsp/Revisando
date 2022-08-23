@@ -51,6 +51,7 @@ document.addEventListener('click', (e) => {
   const el = e.target;
   if (el.classList.contains('apagar')) {
     el.parentElement.remove()
+    salvarTarefas()
   }
 })
 function salvarTarefas() {
@@ -65,6 +66,15 @@ function salvarTarefas() {
   const tarefasJSON = JSON.stringify(listaDeTarefas)//String convertido para JSON
 
   // Salvando Local Storage
-  localStorage.
-    console.log(tarefasJSON)
+  localStorage.setItem('tarefas', tarefasJSON) //pode ser salvo somente strings
 }
+function adicionaTarefasSalvas() {
+  const tarefas = localStorage.getItem('tarefas')
+  const listaDeTarefas = JSON.parse(tarefas) //converte de volta para um objeto Javascript
+  
+  for(let tarefa of listaDeTarefas){
+    criaTarefa(tarefa)
+  }
+
+}
+adicionaTarefasSalvas()
