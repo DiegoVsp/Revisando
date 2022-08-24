@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+/* variáveis no css */
+:root {
+  --primary: #Eb1ccc;
+  --secondary: #95989A;
+  --text-color: #fff;
+  --text-secondary: #000;
+  --text-teatiary: #5d5d5d;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +17,7 @@
 }
 
 /* header{
+
   width: 1024px;
   height: 100vh;
   margin: 0 auto;
@@ -19,3 +29,15 @@ header.segunda {
   margin: 0 auto;
   background-color: blue;
 } */
+
+/* Event form */
+#event-description {
+  background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(../img/hrz-5.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 85vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color:var(--text-color)
+}
