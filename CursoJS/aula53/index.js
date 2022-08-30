@@ -11,6 +11,10 @@
 // const funcao = retornaFuncao()
 // console.log(funcao())
 
+
+
+
+
 const lista = [-8, 3, 4, 5, -9]
 
 let maior = 0;
