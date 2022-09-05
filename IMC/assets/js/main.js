@@ -54,6 +54,7 @@ function nivelImc(imc) {
     return resultado.innerHTML = nivelIMC[0]
   }
 }
+
 function calculaImc(peso, altura) {
   return peso / (altura ** 2)
 }
