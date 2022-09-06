@@ -9,7 +9,6 @@ function criaPessoa(nome, sobrenome, altura, peso) {
       return `${this.nome} ${this.sobrenome}`
 
     },
-
     // Setter
     set nomeCompleto(valor) {
       valor = valor.split(' ')
