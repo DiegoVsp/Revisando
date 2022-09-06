@@ -3,11 +3,37 @@ function criaCalculadora() {
     display: document.querySelector('.display'),
 
 
-
-
-
     inicia() {
       this.cliqueBotoes();
+      this.pressionaEnter();
+    },
+    pressionaEnter(){
+      this.display.addEventListener('keypress', (e) => { //KEYPRESS ENTER
+        if(e.keyCode===13){
+          this.realizaConta()
+        }
+      })
+    },
+    clearDisplay() {
+      this.display.value = '';
+    },
+    apagaUm() {
+      this.display.value = this.display.value.slice(0, -1)
+    },
+    realizaConta() {
+      let conta = this.display.value;
+      try {
+        conta = eval(conta)
+        if (!conta) {
+          alert('Conta Inválida')
+          return
+        }
+
+        this.display.value = conta
+      } catch (e) {
+        alert('Conta Inválida')
+        return
+      }
     },
 
     cliqueBotoes() {
@@ -20,10 +46,19 @@ function criaCalculadora() {
           // metodo dentro de outro metodo usa o this
           this.btnParaDisplay(el.innerText);
         }
-      }).bind(this) // colocar .bind(this) para dizer que é o this da Calculadora e nao de document
+        if (el.classList.contains('btn-clear')) {
+          this.clearDisplay();
+        }
+        if (el.classList.contains('btn-del')) {
+          this.apagaUm();
+        }
+        if (el.classList.contains('btn-eq')) {
+          this.realizaConta()
+        }
+      })//.bind(this) // colocar .bind(this) para dizer que é o this da Calculadora e nao de document
     },
     btnParaDisplay(valor) {
-      this.display.value+=valor;
+      this.display.value += valor;
     },
   }
 }
