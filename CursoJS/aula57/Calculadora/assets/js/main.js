@@ -24,12 +24,12 @@ function criaCalculadora() {
       let conta = this.display.value;
       try {
         conta = eval(conta)
-        if (!conta) {
+        if (conta=== '' || Number.isNaN(conta) || typeof conta !== 'number') {
           alert('Conta Inválida')
           return
         }
 
-        this.display.value = conta
+        this.display.value = String(conta)
       } catch (e) {
         alert('Conta Inválida')
         return
