@@ -6,11 +6,7 @@ const editForm = document.querySelector('#edit-form');
 const editInput = document.querySelector('#edit-input');
 const cancelEditBtn = document.querySelector('#cancel-edit-btn');
 
-<<<<<<< HEAD
 let oldInputValue; //criando variável vazia para guardar valor antigo pra utilizar depois no editar/update
-=======
-let oldInputValue;
->>>>>>> f3760a1940d0e5fdd768f10db7cbb3c0d7b49d01
 
 // Funções
 const saveTodo = (text) => {
