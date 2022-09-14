@@ -5,6 +5,9 @@ const todoList = document.querySelector('#todo-list');
 const editForm = document.querySelector('#edit-form');
 const editInput = document.querySelector('#edit-input');
 const cancelEditBtn = document.querySelector('#cancel-edit-btn');
+
+let oldInputValue; //criando variável vazia para guardar valor antigo pra utilizar depois no editar/update
+
 // Funções
 const saveTodo = (text) => {
   const todo = document.createElement('div')
@@ -34,21 +37,71 @@ const saveTodo = (text) => {
   todoInput.value = ''  //Limpar campo assim que incluido na lista
   todoInput.focus()
 }
+
+const toggleForms = () => {
+  editForm.classList.toggle('hide')
+  todoForm.classList.toggle('hide')
+  todoList.classList.toggle('hide')
+  editInput.focus()
+}
+
+const updateTodo = (text) => {
+  const todos = document.querySelectorAll('.todo')
+
+  todos.forEach((todo) => {
+    let todoTitle = todo.querySelector("h3")
+
+    if (todoTitle.innerText === oldInputValue) {
+      todoTitle.innerText = text
+    }
+  });
+};
+
 // Eventos
-todoForm.addEventListener('submit', e => {
+todoForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const inputValue = todoInput.value
+
+  const inputValue = todoInput.value;
   if (!inputValue) return alert('Preencha o campo')
-  console.log(inputValue)
+
   // save Todo
   saveTodo(inputValue)
 })
 
-document.addEventListener('click', e => {
+document.addEventListener('click', (e) => {
   const el = e.target;
-  const parentEl = el.closest('div')
-  
-  if (el.classList.contains('finish-todo')) return parentEl.classList.add('done')
-  if (el.classList.contains('edit-todo')) return
-  if (el.classList.contains('remove-todo')) return 'Clicou aqui'
+  const parentEl = el.closest('div') //pega a div mais proxima
+  let todoTitle;
+
+  if (parentEl && parentEl.querySelector('h3')) {
+    todoTitle = parentEl.querySelector('h3').innerText || "";
+  }
+
+  if (el.classList.contains('finish-todo')) parentEl.classList.toggle('done')
+  if (el.classList.contains('remove-todo')) parentEl.remove()
+  if (el.classList.contains('edit-todo')) {
+    toggleForms();
+    editInput.value = todoTitle;
+    oldInputValue = todoTitle;
+  }
+
+})
+
+cancelEditBtn.addEventListener('click', e => {
+  e.preventDefault() //para evitar que botao envie o formulário
+  editForm.classList.toggle('hide')
+  todoForm.classList.toggle('hide')
+  todoList.classList.toggle('hide')
+})
+
+editForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const editInputValue = editInput.value;
+
+  if (editInputValue) {
+    updateTodo(editInputValue)
+  }
+
+  toggleForms()
 })
