@@ -39,7 +39,7 @@ function criaCalculadora() {
     cliqueBotoes() {
       // Aqui this é a Calculadora 
       document.addEventListener('click', (e) => { // já aqui o this agora é document
-
+        // usando uma arrow function o this antigo continua sendo o da calculadora e não precisa usar o bind(this)
         const el = e.target;
 
         if (el.classList.contains('btn-num')) {
