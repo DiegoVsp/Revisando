@@ -41,11 +41,11 @@ p1.aumenta(100)
 console.log(p1)
 
 const p2 = {
-  nome:'Caneca',
-  preco:7
+  nome: 'Caneca',
+  preco: 7
 }
 
-Object.setPrototypeOf(p2,Produto.prototype)
+Object.setPrototypeOf(p2, Produto.prototype)
 p2.aumenta(20)
 console.log(p2)
 
@@ -56,7 +56,20 @@ console.log(p2)
 // p3.aumenta(100)
 // console.log(p3)
 
-const p3 = Object.create(Produto.prototype)
-p3.preco = 4
+const p3 = Object.create(Produto.prototype, {
+  preco: {
+    writable: true,
+    configurable: true,
+    enumerable: true,
+    value: 99
+  },
+  tamanho: {
+    writable: true,
+    configurable: true,
+    enumerable: true,
+    value: 43
+  },
+})
+// p3.preco = 113
 p3.aumenta(10)
 console.log(p3)
