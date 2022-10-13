@@ -50,3 +50,48 @@ for (let num of tabuada) {
 // const animal = new Animal('Basset','Preto')
 
 // console.log(animal)
+
+// function Conta(agencia, conta, saldo) {
+//   this.agencia = agencia;
+//   this.conta = conta;
+//   this.saldo = saldo;
+// }
+// Conta.prototype.depositar = function (quantia) {
+//   console.log(this.saldo += quantia);
+// }
+// Conta.prototype.sacar = function (quantia) {
+//   if (this.saldo > quantia) {
+//     this.saldo -= quantia
+//   } else {
+//     console.log('Saldo Insuficiente')
+//   }
+//   this.verSaldo()
+// }
+// Conta.prototype.verSaldo = function () {
+//   console.log(this.saldo)
+// }
+
+// const conta = new Conta(1, 22, 100)
+// conta.depositar(500);
+// conta.sacar(300);
+// conta.verSaldo();
+
+// function CC(agencia, conta, saldo, limite) {
+//   Conta.call(this, agencia, conta, saldo)
+//   this.limite = limite
+// }
+
+
+// CC.prototype = Object.create(Conta.prototype)
+// CC.construtor = CC;
+
+// CC.prototype.sacar = function (quantia) {
+//   if (quantia > (this.limite + this.saldo)) {
+//     console.log('----Insuficiente------')
+//     return
+//   }
+//   this.saldo -= quantia
+//   this.verSaldo()
+// }
+// const contaCorrente = new CC(01, 23, 10, 100)
+// contaCorrente.sacar(100)

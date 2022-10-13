@@ -50,15 +50,15 @@ function CP(agencia, conta, saldo) {
 CP.prototype = Object.create(Conta.prototype);
 CP.prototype.constructor = CP;
 
-const cc = new CC(11, 22, 0, 100);
-cc.depositar(10);
-cc.sacar(110);
-cc.sacar(1);
+const cc = new CC(11, 22, 10, 100);
+// cc.depositar(10);
+cc.sacar(100);
+// cc.sacar(1);
 
 console.log();
 
-const cp = new CP(12, 33, 0);
-cp.depositar(50);
+const cp = new CP(12, 10, 100);
+// cp.depositar(50);
 cp.sacar(100);
 cp.verSaldo();
 
