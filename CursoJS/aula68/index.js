@@ -2,6 +2,7 @@
 // Fitlrar pares
 // Dobrar os valores
 // Reduzir(somar tudo)
+// MAP, FILTER E REDUCE
 
 const numeros = [8, 1, 3, 2, 5, 7, 9, 13, 22, 24]
 

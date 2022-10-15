@@ -22,7 +22,7 @@ function criaPessoa(nome, sobrenome) {
 
   return Object.create(pessoaPrototype, {
     nome: { value: nome },
-    sobrenome: { value: sobrenome }
+    sobrenome: { value: sobrenome },
   })
 }
 const p1 = criaPessoa('Diego', 'Vespa'); //Factory function não tem a palavra new
