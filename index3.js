@@ -78,3 +78,8 @@ const cc = contaCorrente(001, 231, 150)
 console.log(cc.sacar(99))
 console.log(cc.depositar(50))
 console.log(cc.verSaldo())
+
+const cc2 = contaCorrente(002,232,230)
+console.log(cc2)
+console.log(cc2.sacar(20))
+console.log(cc2.verSaldo())
