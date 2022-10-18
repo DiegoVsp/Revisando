@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: row nowrap; /*atalho para flex direction e flex wrap*/
+  /* flex-wrap: wrap; */
+  /* align-content: center; */
+  background-color: yellow;
+  height: 800px;
+  /* gap: 30px; */
+}
+.flex-item{
+  background-color: red;
+  width: 100%;
+  
+  /* flex-grow: 1; */
+  /* flex-basis: 320px; */
+  /* flex-shrink: 1; */
+
+  /* flex: 1 1 320px; atalho para grow shrink e basis */
+  /* height: 200px; */
+  /* margin-bottom: 2%; */
+  /* margin: 10px; */
+  /* width: 50px; */
+  /* text-align: center; */
+  /* display: inline-block; */
+} 
+/* .flex-item:nth-child(2){
+  flex: 2 1 320px;
+  background-color: purple;
+} */
+.flex-item:nth-child(3){
+  align-self: flex-end;
+}
+.flex-item:nth-child(4){
+  align-self: center;
+  order: -2;
+}
+.flex-item:nth-child(2){
+  order: -1;
+  align-self: stretch;
+}
+
+body {
+  font-size: 24px;
+}
+p {
+  margin: 0 0 24px;
+}
+.two-columns {
+  display:flex;
+  /* gap:20px; */
+  /* height: 100vh; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.two-columns .col {
+  margin: 15px;
+  padding: 30px;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+  background-color: greenyellow;
+  /* height: 50%; */
+  /* flex-wrap: wrap; */
+}
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+}
+.gallery .img {
+  flex: 1 0 29%;
+  height: 50px;
+  background-color: blue;
+  margin: 10px;
+}
