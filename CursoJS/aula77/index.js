@@ -55,7 +55,7 @@ function ValidaCpf(cpfEnviado) {
       return cpfEnviado.replace(/\D+/g, '')
     }
   })
-}
+} 
 ValidaCpf.prototype.valida = function () {
   if (typeof this.cpfLimpo === 'undefined') return false
   if (this.cpfLimpo.length !== 11) return false
