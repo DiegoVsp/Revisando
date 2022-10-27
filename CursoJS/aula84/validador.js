@@ -9,6 +9,22 @@ class ValidaCpf {
       value: cpfEnviado.replace(/\D+/g, '')
     })
   }
+
+  // Quando não se utiliza a palavra this dentro de um método, isso significa que ele pode se tornar statico
+  static geraDigito(cpfParcial) {
+    let total = 0;
+    let multiplicador = cpfParcial.length + 1
+
+    for (let stringNumerica of cpfParcial) {
+      // console.log(stringNumerica)
+      total += Number(stringNumerica) * multiplicador
+      multiplicador--
+    }
+
+    const digito = 11 - (total % 11);
+    return digito <= 9 ? String(digito) : '0'
+  }
+
   geraNovoCpf() {
     const cpfParcial = this.cpfLimpo.slice(0, -2)
     const digito1 = ValidaCpf.geraDigito(cpfParcial)
@@ -16,20 +32,7 @@ class ValidaCpf {
 
     this.novoCpf = cpfParcial + digito1 + digito2
   }
-// Quando não se utiliza a palavra this dentro de um método, isso significa que ele pode se tornar statico
-  static geraDigito(cpfParcial) { 
-    let total = 0;
-    let multiplicador = cpfParcial.length + 1
-    
-    for (let stringNumerica of cpfParcial) {
-      // console.log(stringNumerica)
-      total += Number(stringNumerica) * multiplicador
-      multiplicador--
-    }
-    
-    const digito = 11 - (total % 11);
-    return digito <= 9 ? String(digito) : '0'
-  }
+
   valida() {
     if (!this.cpfLimpo) return false;
     if (typeof this.cpfLimpo !== 'string') return false
@@ -39,6 +42,7 @@ class ValidaCpf {
     // console.log(this.novoCpf)
     return this.novoCpf === this.cpfLimpo
   }
+  
   eSequencia() {
     // return this.cpfLimpo.charAt(0).repeat(this.cpfLimpo.length)
     return this.cpfLimpo.charAt(0).repeat(11) === this.cpfLimpo
@@ -51,8 +55,8 @@ console.log(cpf.valida())
 console.log(cpf2.valida())
 // cpf.valida()
 console.log('')
-if(cpf.valida()){
+if (cpf.valida()) {
   console.log('CPF Válido')
-}else {
+} else {
   console.log('CPF Inválido')
 }
