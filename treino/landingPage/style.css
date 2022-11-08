@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --white-color: #fff;
+  --dark-color: #111;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 100px;
+  opacity: .8;
+  z-index: 99999;
+  transition: .3s;
+
+}
+
+header h1 {
+  color: var(--white-color);
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 0.8rem;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  list-style-type: none;
+  margin-left: 20px;
+}
+
+header ul li:hover {
+  transition: all .9s ease-in-out;
+  border-bottom: 1px solid #eee;
+}
+
+header ul li a {
+  color: var(--white-color);
+  text-decoration: none;
+  /* display: block; */
+}
+
+.bg {
+  height: 100vh;
+  background: url(banner.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.bg::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to top, #111, transparent);
+}
+
+.scroll {
+  padding: 20px 100px;
+  background-color: var(--white-color);
+}
+
+.scroll a {
+  color: var(--dark-color);
+}
+
+.intro {
+  height: 100vh;
+  background-color: var(--dark-color);
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  align-items: center;
+  justify-content: space-evenly;
+  color: #eee;
+  gap: 2rem;
+}
+
+.intro h2 {
+  text-align: center;
+}
+
+.conteudo {
+  /* background-color: #fff; */
+}
+
+.conteudo div {
+  background-color: red;
+  height: 250px;
+  width: 300px;
+  margin: 10px auto;
+  padding:5px
+  
+}
