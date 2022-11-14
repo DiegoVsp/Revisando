@@ -41,10 +41,10 @@ class ValidaCPF {
   }
 }
 
-const cpf1 = new ValidaCPF("384.112.348-19")
+const cpf1 = new ValidaCPF("144.566.777-98")
 // console.log(cpf1)
 // console.log(cpf1.geraCPF())
 
-// cpf1.geraDigito('38411234819')
+// cpf1.geraDigito('14456677798')
 console.log(cpf1.valida())
 cpf1.valida()
