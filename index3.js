@@ -67,7 +67,7 @@ const verSaldo = {
 const contaProto = Object.assign({}, sacar, verSaldo, depositar)
 // const contaProto = { ...sacar, ...verSaldo, ...depositar }
 
-function contaCorrente(agencia, conta, saldo) {
+const contaCorrente = (agencia, conta, saldo) => {
   const cc = Object.create(contaProto)
   cc.agencia = agencia;
   cc.conta = conta;

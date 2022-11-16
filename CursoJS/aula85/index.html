@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validando Formulário com Classes</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/script.js" defer></script>
+</head>
+
+<body>
+  <section class="container">
+    <h1>Formulário de Cadastro</h1>
+    <ul>
+      <li>Nenhum Campo deve estar vazio</li>
+      <li>Usuário só poderá conter letras e/ou números</li>
+      <li>Usuário deverá ter entra 3 e 12 caracteres</li>
+      <li>Senha deverá ter entre 6 e 12 caracteres</li>
+    </ul>
+    <form action="/" method="POST" class="formulario">
+      <div>
+        <label for="name">Nome:</label>
+        <input type="text" name="name" id="name" class="name">
+      </div>
+      <div>
+        <label for="lastName">Sobrenome:</label>
+        <input type="text" name="lastName" id="lastName" class="lastName">
+      </div>
+      <div>
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" class="cpf">
+      </div>
+      <div>
+        <label for="user">Usuário:</label>
+        <input type="text" name="user" id="user" class="user">
+      </div>
+      <div>
+        <label for="password">Senha:</label>
+        <input type="text" name="password" id="password" class="password">
+      </div>
+      <div>
+        <label for="repetPassword">Repetir a senha:</label>
+        <input type="text" name="repetPassword" id="repetPassword" class="repet-Password">
+      </div>
+      <div class="button">
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+  </section>
+</body>
+
+</html>
