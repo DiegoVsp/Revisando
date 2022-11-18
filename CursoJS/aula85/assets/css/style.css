@@ -5,7 +5,7 @@
 }
 
 html {
-  /* font-size: 62.5%; */
+  font-size: 62.5%;
 }
 
 body {
@@ -20,8 +20,8 @@ body {
 .container {
 
   background-color: #fff;
-  max-width: 30rem;
-  min-height: 40rem;
+  width: 50rem;
+  min-height: 50rem;
   padding: 2rem;
   border-radius: 1rem;
   margin: 2rem;
@@ -30,7 +30,9 @@ body {
 .container h1 {
   text-transform: uppercase;
   letter-spacing: .1rem;
-  margin: .8rem 0
+  margin: .8rem 0;
+  text-align: center;
+  font-size: 2rem;
 }
 
 .container ul {
@@ -39,9 +41,10 @@ body {
 }
 
 .container ul li {
+  font-size: 1.3rem;
   letter-spacing: .1rem;
-  line-height: 1.2rem;
-  color: red;
+  line-height: 1.7rem;
+  color: rgb(9, 64, 68);
 }
 
 .formulario {
@@ -60,13 +63,17 @@ body {
 
 .formulario label {
   text-transform: uppercase;
-  margin-bottom: .2rem
+  margin-bottom: .2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .formulario input {
-  padding: .2rem .3rem;
-  font-size: 1rem;
+  padding: .3rem 0;
+  font-size: 2rem;
   outline: none;
+  
+  
 }
 
 /* .formulario .button {

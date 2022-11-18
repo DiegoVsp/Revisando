@@ -41,8 +41,8 @@ class ValidaFormulario {
     for (let errorText of this.formulario.querySelectorAll('.error-text')) {
       errorText.remove() // não irá adicionar mais textos dos erros
     }
-
-    for (let campo of this.formulario.querySelectorAll('.validar')) {
+// 1º
+   for (let campo of this.formulario.querySelectorAll('.validar')) {
       const label = campo.previousElementSibling.innerHTML;
       if (!campo.value) {
         this.criaErro(campo, `Campo "${label}" não pode estar em branco`)
