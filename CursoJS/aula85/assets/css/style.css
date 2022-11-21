@@ -71,9 +71,7 @@ body {
 .formulario input {
   padding: .3rem 0;
   font-size: 2rem;
-  outline: none;
-  
-  
+  outline: none; 
 }
 
 /* .formulario .button {
