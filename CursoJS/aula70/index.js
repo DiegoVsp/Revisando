@@ -36,7 +36,7 @@ for (let chave in pessoa1) {
 // Tudo fica dentro do padrão
 // Função Factory / Função Construtor / Classes
 console.log('------------------------')
-console.log('------Construtor Factory-------')
+console.log('------Factory Function-------')
 function criaPessoa(nome, sobrenome) { //Factory Function
   return {
     nome,

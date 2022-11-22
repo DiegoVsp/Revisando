@@ -14,7 +14,7 @@ function criaPessoa(nome, sobrenome, altura, peso) {
       valor = valor.split(' ')
       this.nome = valor.shift()
       this.sobrenome = valor.join(' ')
-      console.log(valor)
+      // console.log(valor)
     },
 
     fala(assunto = 'falando sobre nada') {
@@ -31,7 +31,8 @@ function criaPessoa(nome, sobrenome, altura, peso) {
   // quando uma função está dentro de um objeto é chamado de método
 }
 let p1 = criaPessoa('Diego', 'Vespa', 1.8, 80)
-// console.log(p1.nomeCompleto)
+console.log(p1.nomeCompleto)
+console.log('---** Alterando nome P1 **---')
 p1.nomeCompleto = 'Maria Oliveira Silva' //alterando nome
 // console.log(p1.sobrenome)
 // console.log(p1.fala('falando sobre JS'))
@@ -41,12 +42,12 @@ console.log(p1.fala()) //<- Sem passar um assunto ele assume uma assunto padrao
 // console.log(p1.sobrenome)
 console.log(p1.nomeCompleto)
 
-let p2 = criaPessoa('Ricardo', 'Motta', 1.9, 123)
+// let p2 = criaPessoa('Ricardo', 'Motta', 1.9, 123)
 
-let p3 = criaPessoa('Patricia', 'Alves', 1.8, 56)
+// let p3 = criaPessoa('Patricia', 'Alves', 1.8, 56)
 
-console.log(p2.fala('falando sobre luta livre'))
+// console.log(p2.fala('falando sobre luta livre'))
 
-console.log(p2.imc)
+// console.log(p2.imc)
 
-console.log(p3.imc)
+// console.log(p3.imc)
