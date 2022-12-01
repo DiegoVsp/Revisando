@@ -15,7 +15,7 @@
     <h1 class="header-title">Cadastro de Clientes</h1>
   </header>
   <main>
-    <button class="button blue">Cadastrar Cliente</button>
+    <button class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
     <table class="records">
       <thead>
         <tr>
@@ -69,12 +69,12 @@
         </tr>
       </tbody>
     </table>
-    <div class="modal">
+    <div class="modal" id="modal">
       <div class="modal-content">
         <header class="modal-header">
           <h2>Novo Cliente</h2>
 
-          <span class="modal-close">&#10005</span> <!-- X -->
+          <span class="modal-close" id="modal-close">&#10005</span> <!-- X -->
         </header>
         <form class="modal-form">
           <input type="text" class="modal-field" placeholder="Nome do Cliente">
@@ -89,7 +89,9 @@
       </div>
     </div>
   </main>
-  <footer>footer</footer>
+  <footer>
+    Copyright &copy: Diego Vespa
+  </footer>
 </body>
 
 </html>
