@@ -46,4 +46,8 @@ function baixaPagina() {
     return esperaAi('Baixei a página', 3000);
   }
 }
-baixaPagina().then((resp) => console.log(resp)).catch(e => console.log('ERROR', e))
+baixaPagina()
+  .then((resp) =>
+    console.log(resp))
+  .catch(e =>
+    console.log('ERROR', e))
