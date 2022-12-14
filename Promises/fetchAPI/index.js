@@ -1,6 +1,5 @@
 const userData = document.querySelector('[user-js="user-data"]')
 
-
 fetch('https://jsonplaceholder.typicode.com/users')
   .then((response) => {
     if (!response.ok) {
