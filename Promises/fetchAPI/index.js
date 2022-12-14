@@ -12,7 +12,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
     // console.log(user.username)
     let li = document.createElement('li');
     let span = document.createElement('span');
-    span.innerText = user.username;
+    span.innerText = user.name;
     li.appendChild(span);
     // li.innerHTML = `${user.username}`
     userData.appendChild(li)
